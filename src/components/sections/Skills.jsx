@@ -1,5 +1,4 @@
 import React from "react";
-import BackgroundBeams from "../ui/BackgroundBeams.jsx";
 import { GlowingEffectDemo } from "../ui/GlowingEffectDemo.jsx";
 
 export default function Skills() {
@@ -10,7 +9,6 @@ export default function Skills() {
     >
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.12),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.10),transparent_40%)]" />
-        <BackgroundBeams className="absolute inset-0 opacity-26" />
       </div>
 
       {/* Static watermark layer pinned to Skills background */}

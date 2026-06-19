@@ -1,10 +1,11 @@
 import React from "react";
 import { BackgroundBeamsWithCollision } from "./BackgroundBeamWithCollision";
+import { CanvasText } from "./CanvasText.jsx";
 
 const featureCards = [
   {
     title: "DSA",
-    value: "650+ Problems",
+    value: "1100+ Problems",
     description:
       "Strong grip on arrays, graphs, DP, and contest-style problem solving.",
   },
@@ -48,14 +49,39 @@ export function BackgroundBeamsWithCollisionDemo() {
         </h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-white/60">
-          Exploring my journey, skills, and passion for creating digital experiences
+          Exploring my journey, skills, and passion for creating digital
+          experiences
         </p>
 
         <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-blue-500" />
       </div>
 
-      <BackgroundBeamsWithCollision className="mx-auto mt-14 min-h-160 max-w-6xl rounded-[30px] border border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.14),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.12),transparent_36%),linear-gradient(180deg,rgba(2,6,23,0.88),rgba(2,8,23,0.82))] shadow-[0_30px_90px_rgba(2,6,23,0.45)] backdrop-blur-xl md:min-h-168">
+      <BackgroundBeamsWithCollision className="mx-auto mt-14 h-auto min-h-fit max-w-6xl rounded-[30px] border border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.14),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.12),transparent_36%),linear-gradient(180deg,rgba(2,6,23,0.88),rgba(2,8,23,0.82))] shadow-[0_30px_90px_rgba(2,6,23,0.45)] backdrop-blur-xl">
         <div className="relative z-20 w-full px-5 py-10 md:px-10 md:py-12">
+          {/* Greeting with name above the grid */}
+          <div className="mb-10 text-left">
+            <h3 className="text-left text-[clamp(2rem,5vw,3.6rem)] font-black leading-none tracking-[-0.055em] text-white flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span>Hi I&apos;m</span>
+              <CanvasText
+                className="inline-block"
+                text="Aditya Saurav"
+                backgroundClassName="bg-[#3b82f6]"
+                colors={[
+                  "rgba(96, 165, 250, 1)",
+                  "rgba(74, 145, 249, 0.95)",
+                  "rgba(59, 130, 246, 0.9)",
+                  "rgba(37, 99, 235, 0.85)",
+                  "rgba(59, 130, 246, 0.75)",
+                  "rgba(96, 165, 250, 0.65)",
+                ]}
+                lineWidth={1.2}
+                lineGap={4}
+                curveIntensity={24}
+                animationDuration={14}
+              />
+            </h3>
+          </div>
+
           <div className="grid items-start gap-6 lg:grid-cols-[1fr_1.2fr]">
             <div className="space-y-5">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -91,33 +117,148 @@ export function BackgroundBeamsWithCollisionDemo() {
                 Get to know my journey
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-slate-300 md:text-base">
-                I’m Aditya Saurav, a final-year student at NIT Patna and a
-                full-stack developer focused on building interfaces that feel
-                polished, responsive, and purposeful. My foundation in
-                competitive programming has shaped the way I approach problems —
-                emphasizing structure, efficiency, and clarity under
-                constraints. I enjoy working across the stack, designing clean
-                user interfaces while building scalable backend systems that
-                perform reliably in real-world scenarios. I’m particularly
-                interested in performance, system design, and creating
-                experiences that are intuitive from the first interaction.
-                Currently, I’m looking for opportunities where I can contribute
-                to meaningful products and grow as an engineer.
-              </p>
+              <div className="mt-5 space-y-4 text-sm leading-7 text-slate-300 md:text-base">
+                <p>
+                  I'm a B.Tech student at NIT Patna with a passion for software
+                  engineering and building impactful digital products.
+                </p>
 
-              <div className="mt-6 flex flex-wrap gap-3">
-                <span className="rounded-full border border-cyan-200/25 bg-cyan-300/10 px-3 py-1 text-xs font-medium text-cyan-100">
-                  Problem Solver
-                </span>
-                <span className="rounded-full border border-cyan-200/25 bg-cyan-300/10 px-3 py-1 text-xs font-medium text-cyan-100">
-                  Product Builder
-                </span>
-                <span className="rounded-full border border-cyan-200/25 bg-cyan-300/10 px-3 py-1 text-xs font-medium text-cyan-100">
-                  Fast Learner
-                </span>
+                <p>
+                  I continuously strengthen my understanding of{" "}
+                  <strong>
+                    Data Structures & Algorithms, OOP, DBMS, Operating Systems,
+                    Computer Networks, and System Design
+                  </strong>{" "}
+                  while applying these concepts through real-world projects.
+                </p>
+
+                <p>
+                  I am a <strong>fast learner</strong>,{" "}
+                  <strong>hardworking</strong>, and
+                  <strong> self-motivated</strong> individual who enjoys solving
+                  challenging problems, adapting to new technologies,
+                  collaborating with teams, and continuously improving to build
+                  scalable and efficient software.
+                </p>
               </div>
             </article>
+          </div>
+
+          {/* Coding Profile Section */}
+          {/* Coding Profile Section */}
+          <div className="mt-16 border-t border-white/10 pt-12">
+            <h3 className="mb-6 text-xl font-bold tracking-tight text-white uppercase">
+              Coding Profiles
+            </h3>
+
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {/* LeetCode */}
+              <a
+                href="https://leetcode.com/u/_AdITYa_14/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/50 hover:bg-white/10"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="rounded-xl bg-amber-500/10 p-3 transition-transform duration-300 group-hover:scale-110">
+                    <span className="text-2xl">🏆</span>
+                  </div>
+
+                  <span className="rounded-full bg-amber-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-amber-400">
+                    LeetCode
+                  </span>
+                </div>
+
+                <div className="mt-8">
+                  <h4 className="text-xl font-bold text-white">Knight</h4>
+                  <p className="mt-1 text-sm text-white/60">1954 Max Rating</p>
+                </div>
+              </a>
+
+              {/* Codeforces */}
+              <a
+                href="https://codeforces.com/profile/sinhaady14"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/50 hover:bg-white/10"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="rounded-xl bg-blue-500/10 p-3 transition-transform duration-300 group-hover:scale-110">
+                    <span className="text-2xl">💻</span>
+                  </div>
+
+                  <span className="rounded-full bg-blue-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-blue-400">
+                    Codeforces
+                  </span>
+                </div>
+
+                <div className="mt-8">
+                  <h4 className="text-xl font-bold text-white">Pupil</h4>
+                  <p className="mt-1 text-sm text-white/60">1349 Max Rating</p>
+                </div>
+              </a>
+
+              {/* CodeChef */}
+              <a
+                href="https://www.codechef.com/users/losthope_14"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/50 hover:bg-white/10"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="rounded-xl bg-orange-500/10 p-3 transition-transform duration-300 group-hover:scale-110">
+                    <span className="text-2xl">⭐</span>
+                  </div>
+
+                  <span className="rounded-full bg-orange-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-orange-400">
+                    CodeChef
+                  </span>
+                </div>
+
+                <div className="mt-8">
+                  <h4 className="text-xl font-bold text-white">3★</h4>
+                  <p className="mt-1 text-sm text-white/60">1610 Max Rating</p>
+                </div>
+              </a>
+
+              {/* GitHub */}
+              {/* GeeksforGeeks Card */}
+              <a
+                href="https://www.geeksforgeeks.org/user/adityasiowfe/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-green-500/50 hover:bg-white/10"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="rounded-xl bg-green-500/10 p-2.5 group-hover:scale-110 transition-transform duration-300">
+                    <svg
+                      className="h-6 w-6 text-[#2F8D46]"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4
+                 1.41-1.41L11 14.17l5.59-5.58L18 10l-7 7z"
+                      />
+                    </svg>
+                  </div>
+
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-2.5 py-1 rounded-full">
+                    GeeksforGeeks
+                  </span>
+                </div>
+
+                <div className="mt-8">
+                  <h4 className="text-lg font-bold text-white">
+                    Problem Solver
+                  </h4>
+                  <p className="text-xs text-white/50 mt-1">
+                    DSA Practice • Coding Profile
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </BackgroundBeamsWithCollision>

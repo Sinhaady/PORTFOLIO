@@ -6,6 +6,8 @@ import About from './components/sections/About.jsx'
 import BackgroundBeams from './components/ui/BackgroundBeams.jsx'
 import Navbar from './components/layout/Navbar.jsx'
 import Skills from './components/sections/Skills.jsx'
+import Projects from './components/sections/Projects.jsx'
+import Contact from './components/sections/Contact.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div id="home" className="relative min-h-screen overflow-hidden bg-[#020408] text-white">
@@ -21,6 +23,8 @@ createRoot(document.getElementById('root')).render(
           <Hero />
           <About />
           <Skills/>
+          <Projects />
+          <Contact />
         </main>
       </div>
     </div>

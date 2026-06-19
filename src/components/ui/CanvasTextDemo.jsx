@@ -83,6 +83,34 @@ export function CanvasTextDemo() {
             </div>
           ))}
         </div>
+
+        <div className="flex flex-wrap gap-4 pt-2">
+          <a
+            href="#projects"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-blue-600 px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_20px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-500 hover:shadow-[0_6px_24px_rgba(59,130,246,0.5)]"
+          >
+            <span>View Work</span>
+            <svg
+              className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-bold text-neutral-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/10 hover:text-white"
+          >
+            Contact Me
+          </a>
+        </div>
       </div>
     </div>
   );
