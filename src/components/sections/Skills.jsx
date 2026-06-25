@@ -43,7 +43,7 @@ export default function Skills() {
             Categories
           </span>
         </div>
-
+    
         {/* Floating Stat: Technologies (Top Right) */}
         <div className="absolute -top-12 -right-4 md:right-0 bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center min-w-[120px] transition-transform hover:scale-105">
           <span className="text-3xl md:text-4xl font-bold text-cyan-400">

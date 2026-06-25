@@ -64,7 +64,7 @@ export default function TextHoverEffect({
             </>
           )}
         </linearGradient>
-
+          
         <MotionRadialGradient
           id="revealMask"
           gradientUnits="userSpaceOnUse"

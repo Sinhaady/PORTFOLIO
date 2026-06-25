@@ -26,7 +26,7 @@ createRoot(document.getElementById('root')).render(
           <Projects />
           <Contact />
         </main>
-      </div>
+      </div> 
     </div>
   </StrictMode>,
 )

@@ -9,6 +9,7 @@ import {
 } from "react-icons/si";
 import { FiLayout, FiServer, FiCode, FiCpu, FiDatabase } from "react-icons/fi";
 import { GlowingEffect } from "./GlowingEffectProps ";
+import { SiDocker } from "react-icons/si";
 
 const skillCategories = [
   {
@@ -48,7 +49,7 @@ const skillCategories = [
     skills: [
       { name: "Git", icon: <FaGithub className="text-[#ffffff] h-4 w-4" /> },
       { name: "MongoDB", icon: <SiMongodb className="text-[#47A248] h-4 w-4" /> },
-      { name: "PostgreSQL", icon: <SiPostgresql className="text-[#4169E1] h-4 w-4" /> },
+     { name: "Docker", icon: <SiDocker className="text-[#2496ED] h-4 w-4" /> },
       { name: "Vercel", icon: <SiVercel className="text-[#ffffff] h-4 w-4" /> },
       { name: "Postman", icon: <SiPostman className="text-[#FF6C37] h-4 w-4" /> }
     ]

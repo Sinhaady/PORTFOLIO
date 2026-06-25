@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { FiMail, FiPhone, FiLinkedin, FiGithub, FiSend } from "react-icons/fi";
+import { FiMail, FiLinkedin, FiGithub, FiSend } from "react-icons/fi";
 import { GlowingEffect } from "../ui/GlowingEffectProps ";
+
+const CONTACT_EMAIL = "sinhaady14@gmail.com";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -8,10 +10,18 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [sentStatus, setSentStatus] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Thank you ${formData.name}! Your message has been sent (this is a demo).`);
+
+    const subject = encodeURIComponent(`Portfolio message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    setSentStatus("Your email app is opening with the message ready to send.");
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -59,7 +69,7 @@ export default function Contact() {
 
               <div className="mt-8 space-y-4">
                 <a
-                  href="mailto:sinhaady14@gmail.com"
+                  href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Portfolio inquiry")}`}
                   className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 transition-all hover:bg-white/10"
                 >
                   <div className="rounded-lg bg-blue-500/10 p-2.5 text-blue-400">
@@ -67,7 +77,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-neutral-400 uppercase tracking-wider">Email Me</p>
-                    <p className="text-sm font-semibold text-white">sinhaady14@gmail.com</p>
+                    <p className="text-sm font-semibold text-white">{CONTACT_EMAIL}</p>
                   </div>
                 </a>
 
@@ -172,6 +182,12 @@ export default function Contact() {
                     <span>Send Message</span>
                     <FiSend className="h-4 w-4" />
                   </button>
+
+                  {sentStatus && (
+                    <p className="rounded-lg border border-cyan-400/20 bg-cyan-400/10 px-4 py-3 text-sm text-cyan-100">
+                      {sentStatus}
+                    </p>
+                  )}
                 </form>
               </div>
             </div>
